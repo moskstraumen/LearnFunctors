@@ -2,6 +2,8 @@
 #include <vector>
 #include <functional>
 #include <string>
+#include "Python.h"
+#include "wchar.h"
 
 template<typename T>
 class Less_Than
@@ -54,7 +56,7 @@ public:
 
 };
 
-int main( int argc, char **argv)
+int main( int argc, char *argv[])
 {
 	Less_Than<int> lti(42);
 	TestClass t;
@@ -70,6 +72,14 @@ int main( int argc, char **argv)
    // auto count = std::bind(count01, this, vec, lti);
     auto addition = std::bind(sum, 3, std::placeholders::_1);
     std::cout << addition(4) << std::endl;
+
+
+    std::string x = "sudo /usr/local/Cellar/python3/3.6.1/bin/python3.6 /Users/wangj37/Documents/workspace/pyQt/pydev_learn_window/main.py";
+
+    system(x.c_str());
+
+   // std::cout << wcs << std::endl;
+
 
     return 0;
 }
