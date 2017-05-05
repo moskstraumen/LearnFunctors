@@ -58,6 +58,8 @@ public:
 
 int main( int argc, char *argv[])
 {
+
+	std::cout << "Program started !" << std::endl;
 	Less_Than<int> lti(42);
 	TestClass t;
 	auto PrintOut = std::mem_fn(&TestClass::PrintOut);
