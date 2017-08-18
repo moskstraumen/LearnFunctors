@@ -75,7 +75,6 @@ int main( int argc, char *argv[])
     auto addition = std::bind(sum, 3, std::placeholders::_1);
     std::cout << addition(4) << std::endl;
 
-
     std::string x = "sudo /usr/local/Cellar/python3/3.6.1/bin/python3.6 /Users/wangj37/Documents/workspace/pyQt/pydev_learn_window/main.py";
 
     system(x.c_str());
